@@ -1,0 +1,144 @@
+.idatable {
+  --green-background: #00a11e;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Source Sans Pro;
+}
+.idatable .column-sorted {
+  background-color: var(--green-background);
+  color: #ffffff;
+}
+.idatable .column-sorted-table {
+  color: var(--green-background);
+}
+.idatable table {
+  width: 98%;
+  border-collapse: collapse;
+  margin-left: 16px;
+}
+.idatable th {
+  text-align: left;
+}
+
+.idatable thead {
+  border-bottom: 2px solid #EDEDED;
+}
+.idatable td,.idatable th {
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.idatable tr.row-selected {
+  background-color: rgba(0, 161, 30, 0.07);
+}
+.idatable tr:nth-child(even):not(.row-selected) {
+  background-color: #F8F9FA;
+}
+
+.idatable .panel {
+  height: 24px;
+  margin-left:5px;
+  /* margin-right: 5px;*/
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  vertical-align: middle;
+}
+.idatable .control {
+  border: 1px solid #D5DAE0;
+  /*box-sizing: border-box;*/
+  border-radius: 2px;
+  background-color: #FBFBFB;
+
+}
+.idatable .control-colored {
+  background-color: var(--green-background);
+  color: #ffffff;
+  border-radius: 2px;
+  border: 1px var(--green-background);
+}
+.idatable .select-columns {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+}
+.idatable .select-columns ul {
+  padding-inline-start: 5px;
+  list-style-type: none;
+  opacity: 1;
+  text-align: left;
+  background-color: white;
+  margin: 0px;
+}
+.idatable .bold {
+  font-weight: bold;
+}
+/* custom scrollbar 
+.idatable .select-columns {
+  scrollbar-color: white #d5dae0;
+  scrollbar-
+}
+*/
+/* width */
+.idatable .select-columns::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.idatable .select-columns::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+/* Handle */
+.idatable .select-columns::-webkit-scrollbar-thumb {
+  background: #d5dae0;
+}
+
+/* Handle on hover */
+.idatable .select-columns::-webkit-scrollbar-thumb:hover {
+  background: darkgrey; 
+}
+/* custom checkboxes */
+.idatable .checkbox {
+  position: relative;
+  padding-left: 25px;
+  /* line-height: 20px;*/
+  cursor: pointer;
+}
+.idatable input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+.idatable .checkbox::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+}
+
+.idatable .checkbox::after {
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 4px;
+  border-radius: 1px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  content: "";
+  position: absolute;
+}
+/*
+.idatable .checkbox.notchecked::after {
+  opacity: 0;
+}
+*/
+.idatable .checkbox.checked::after {
+  opacity: 1;
+}
+.idatable .checkbox.checked::before {
+  background-color: var(--green-background);
+}

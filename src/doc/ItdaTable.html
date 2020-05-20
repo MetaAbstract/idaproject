@@ -1,0 +1,450 @@
+<p><a name="module_IdaTable"></a></p>
+
+<h2>IdaTable</h2>
+
+<ul>
+<li><a href="#module_IdaTable">IdaTable</a>
+<ul>
+<li><em>static</em>
+<ul>
+<li><a href="#module_IdaTable.methods">.methods</a>
+<ul>
+<li><a href="#module_IdaTable.methods.sortProducts">.sortProducts()</a></li>
+<li><a href="#module_IdaTable.methods.setProductsPerPage">.setProductsPerPage()</a></li>
+<li><a href="#module_IdaTable.methods.nextPage">.nextPage()</a></li>
+<li><a href="#module_IdaTable.methods.previosPage">.previosPage()</a></li>
+<li><a href="#module_IdaTable.methods.selectAllProductsOnPage">.selectAllProductsOnPage()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProducts">.deleteProducts()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductConfirmWindow">.deleteProductConfirmWindow()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductCancel">.deleteProductCancel()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductConfirm">.deleteProductConfirm()</a></li>
+<li><a href="#module_IdaTable.methods.showAllColumnsChanged">.showAllColumnsChanged()</a></li>
+<li><a href="#module_IdaTable.methods.showHideColumn">.showHideColumn()</a></li>
+<li><a href="#module_IdaTable.methods.showHideColumnsSelection">.showHideColumnsSelection()</a></li>
+<li><a href="#module_IdaTable.methods.HideColumnsSelection">.HideColumnsSelection()</a></li>
+<li><a href="#module_IdaTable.methods.columnSortedLabelCSS">.columnSortedLabelCSS(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.columnSortedTableCSS">.columnSortedTableCSS(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.columnSortDirection">.columnSortDirection(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.productSelected">.productSelected(product)</a></li>
+<li><a href="#module_IdaTable.methods.selectRow">.selectRow()</a></li>
+</ul></li>
+<li><a href="#module_IdaTable.computed">.computed</a>
+<ul>
+<li><a href="#module_IdaTable.computed.getProductsPage">.getProductsPage()</a></li>
+<li><a href="#module_IdaTable.computed.columnsSelectedCount">.columnsSelectedCount()</a></li>
+<li><a href="#module_IdaTable.computed.allProductsSelectedCheck">.allProductsSelectedCheck()</a></li>
+</ul></li>
+<li><a href="#module_IdaTable.directives">.directives</a></li>
+<li><a href="#module_IdaTable.data">.data()</a></li>
+<li><a href="#module_IdaTable.created">.created()</a></li>
+</ul></li>
+<li><em>inner</em>
+<ul>
+<li><a href="#module_IdaTable..selectedProducts">~selectedProducts</a></li>
+<li><a href="#module_IdaTable..selectedProduct">~selectedProduct</a></li>
+<li><a href="#module_IdaTable..selectedProductRow">~selectedProductRow</a></li>
+<li><a href="#module_IdaTable..allProductsSelected">~allProductsSelected</a></li>
+<li><a href="#module_IdaTable..confirmStyle">~confirmStyle</a></li>
+<li><a href="#module_IdaTable..selectColumnsStyle">~selectColumnsStyle</a></li>
+<li><a href="#module_IdaTable..showColumns">~showColumns</a></li>
+<li><a href="#module_IdaTable..getProducts">~getProducts</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_IdaTable.methods"></a></p>
+
+<h3>IdaTable.methods</h3>
+
+<p>METHODS</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<ul>
+<li><a href="#module_IdaTable.methods">.methods</a>
+<ul>
+<li><a href="#module_IdaTable.methods.sortProducts">.sortProducts()</a></li>
+<li><a href="#module_IdaTable.methods.setProductsPerPage">.setProductsPerPage()</a></li>
+<li><a href="#module_IdaTable.methods.nextPage">.nextPage()</a></li>
+<li><a href="#module_IdaTable.methods.previosPage">.previosPage()</a></li>
+<li><a href="#module_IdaTable.methods.selectAllProductsOnPage">.selectAllProductsOnPage()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProducts">.deleteProducts()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductConfirmWindow">.deleteProductConfirmWindow()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductCancel">.deleteProductCancel()</a></li>
+<li><a href="#module_IdaTable.methods.deleteProductConfirm">.deleteProductConfirm()</a></li>
+<li><a href="#module_IdaTable.methods.showAllColumnsChanged">.showAllColumnsChanged()</a></li>
+<li><a href="#module_IdaTable.methods.showHideColumn">.showHideColumn()</a></li>
+<li><a href="#module_IdaTable.methods.showHideColumnsSelection">.showHideColumnsSelection()</a></li>
+<li><a href="#module_IdaTable.methods.HideColumnsSelection">.HideColumnsSelection()</a></li>
+<li><a href="#module_IdaTable.methods.columnSortedLabelCSS">.columnSortedLabelCSS(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.columnSortedTableCSS">.columnSortedTableCSS(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.columnSortDirection">.columnSortDirection(fieldName)</a></li>
+<li><a href="#module_IdaTable.methods.productSelected">.productSelected(product)</a></li>
+<li><a href="#module_IdaTable.methods.selectRow">.selectRow()</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.sortProducts"></a></p>
+
+<h4>methods.sortProducts()</h4>
+
+<p>сортирует продукты через мутацию</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a> <br />
+<strong>Fieldname</strong>: string имя поля для сортировки  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.setProductsPerPage"></a></p>
+
+<h4>methods.setProductsPerPage()</h4>
+
+<p>меняет количество продуктов на странице</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.nextPage"></a></p>
+
+<h4>methods.nextPage()</h4>
+
+<p>переход на следующую страницу с данными</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.previosPage"></a></p>
+
+<h4>methods.previosPage()</h4>
+
+<p>переход на предидущую страницу с данными</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.selectAllProductsOnPage"></a></p>
+
+<h4>methods.selectAllProductsOnPage()</h4>
+
+<p>выбрать все продукты на странице</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.deleteProducts"></a></p>
+
+<h4>methods.deleteProducts()</h4>
+
+<p>удалить выбранные продукты</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.deleteProductConfirmWindow"></a></p>
+
+<h4>methods.deleteProductConfirmWindow()</h4>
+
+<p>открывает окно подтверждения для контекстного удаления продукта</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.deleteProductCancel"></a></p>
+
+<h4>methods.deleteProductCancel()</h4>
+
+<p>отмена подтверждения контекстного удаления продукта</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.deleteProductConfirm"></a></p>
+
+<h4>methods.deleteProductConfirm()</h4>
+
+<p>подтверждение удаления выбранного продукта</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.showAllColumnsChanged"></a></p>
+
+<h4>methods.showAllColumnsChanged()</h4>
+
+<p>отработка чекбокса выбрать все колонки</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.showHideColumn"></a></p>
+
+<h4>methods.showHideColumn()</h4>
+
+<p>обратная отработка чекбокса выбрать все колокни от выбранных колонок</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.showHideColumnsSelection"></a></p>
+
+<h4>methods.showHideColumnsSelection()</h4>
+
+<p>открывает меню выбора видимых колонок</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.HideColumnsSelection"></a></p>
+
+<h4>methods.HideColumnsSelection()</h4>
+
+<p>скрывает меню выбора видимых колонок</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.columnSortedLabelCSS"></a></p>
+
+<h4>methods.columnSortedLabelCSS(fieldName)</h4>
+
+<p>возвращает css class object для лейблов отражающих текущую колонку сортировки</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| fieldName | <code>string</code> | имя поля |</p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.columnSortedTableCSS"></a></p>
+
+<h4>methods.columnSortedTableCSS(fieldName)</h4>
+
+<p>возвращает css class object для заголовка колонки
+в зависимости от  того есть по ней сортировка или нет</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| fieldName | <code>string</code> | имя поля для проверки |</p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.columnSortDirection"></a></p>
+
+<h4>methods.columnSortDirection(fieldName)</h4>
+
+<p>возвращает символ направления сортировки или пустую строку по имени поля
+в зависимости от имени поля</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| fieldName | <code>string</code> | имя поля для проверки |</p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.productSelected"></a></p>
+
+<h4>methods.productSelected(product)</h4>
+
+<p>предикат выбран ли продукт</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| product | <code>object</code> | продкут для проверки |</p>
+
+<hr />
+
+<p><a name="module_IdaTable.methods.selectRow"></a></p>
+
+<h4>methods.selectRow()</h4>
+
+<p>уставливает | сбрасывает продукт соответсвующий колонке по клику</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.methods"><code>methods</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.computed"></a></p>
+
+<h3>IdaTable.computed</h3>
+
+<p>COMPUTED</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<ul>
+<li><a href="#module_IdaTable.computed">.computed</a>
+<ul>
+<li><a href="#module_IdaTable.computed.getProductsPage">.getProductsPage()</a></li>
+<li><a href="#module_IdaTable.computed.columnsSelectedCount">.columnsSelectedCount()</a></li>
+<li><a href="#module_IdaTable.computed.allProductsSelectedCheck">.allProductsSelectedCheck()</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_IdaTable.computed.getProductsPage"></a></p>
+
+<h4>computed.getProductsPage()</h4>
+
+<p>получает массив продуктов для текущей страницу</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.computed"><code>computed</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.computed.columnsSelectedCount"></a></p>
+
+<h4>computed.columnsSelectedCount()</h4>
+
+<p>считает количество выбранных колонок для показа</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.computed"><code>computed</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.computed.allProductsSelectedCheck"></a></p>
+
+<h4>computed.allProductsSelectedCheck()</h4>
+
+<p>предикат проверающий все ли продуктв на странице выбраны
+ чтобы правильно работал чекбокс выбрать все при отмене выбора какого либо продукта</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable.computed"><code>computed</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.directives"></a></p>
+
+<h3>IdaTable.directives</h3>
+
+<p>директива для плагина скрытия менюшек при клике снаружи элемента</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.data"></a></p>
+
+<h3>IdaTable.data()</h3>
+
+<p>модель данных</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable.created"></a></p>
+
+<h3>IdaTable.created()</h3>
+
+<p>хук для загрузки данных с имитации api</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..selectedProducts"></a></p>
+
+<h3>IdaTable~selectedProducts</h3>
+
+<p>отмеченные продукты для удаления</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..selectedProduct"></a></p>
+
+<h3>IdaTable~selectedProduct</h3>
+
+<p>продукт выбранный контекстно для удаления
+если null значит не контекстное удаление</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..selectedProductRow"></a></p>
+
+<h3>IdaTable~selectedProductRow</h3>
+
+<p>продукт для выбранной строки таблицы</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..allProductsSelected"></a></p>
+
+<h3>IdaTable~allProductsSelected</h3>
+
+<p>модель для чекбокса выбрать все продукты в таблице</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..confirmStyle"></a></p>
+
+<h3>IdaTable~confirmStyle</h3>
+
+<p>объект стиля для окна подтверждения удаления</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..selectColumnsStyle"></a></p>
+
+<h3>IdaTable~selectColumnsStyle</h3>
+
+<p>объект стиля для меню выбора видимости колонок</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..showColumns"></a></p>
+
+<h3>IdaTable~showColumns</h3>
+
+<p>модель для чекбоков выбранных колонок в меню выбора видимости
+all выбрать все колонки</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />
+
+<p><a name="module_IdaTable..getProducts"></a></p>
+
+<h3>IdaTable~getProducts</h3>
+
+<p>загрузка данных с api</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_IdaTable"><code>IdaTable</code></a>  </p>
+
+<hr />

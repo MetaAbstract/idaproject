@@ -1,0 +1,3 @@
+# idatable
+
+idaproject test task

@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "IdaTableDocHTML",
+      "type": "shell",
+      "command": "markdown ./src/doc/IdaTable.md > ./src/doc/ItdaTable.html",
+      "problemMatcher": []
+    },
+    {
+      "label": "storeHTML",
+      "type": "shell",
+      "command": "markdown ./src/doc/store.md > ./src/doc/store.html",
+      "problemMatcher": []
+    },
+    {
+      "label": "cssHTML",
+      "type": "shell",
+      "command": "markdown ./src/doc/css.md > ./src/doc/css.html",
+      "problemMatcher": []
+    }
+  ]
+}

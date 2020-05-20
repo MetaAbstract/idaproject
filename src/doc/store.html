@@ -1,0 +1,384 @@
+<p><a name="module_store"></a></p>
+
+<h2>store</h2>
+
+<ul>
+<li><a href="#module_store">store</a>
+<ul>
+<li><a href="#module_store..storeConfig">~storeConfig</a>
+<ul>
+<li><a href="#module_store..storeConfig.state">.state</a>
+<ul>
+<li><a href="#module_store..storeConfig.state.dataLoaded">.dataLoaded</a></li>
+<li><a href="#module_store..storeConfig.state.products">.products</a></li>
+<li><a href="#module_store..storeConfig.state.productsPerPage">.productsPerPage</a></li>
+<li><a href="#module_store..storeConfig.state.currentPage">.currentPage</a></li>
+<li><a href="#module_store..storeConfig.state.sortField">.sortField</a></li>
+<li><a href="#module_store..storeConfig.state.sortDirection">.sortDirection</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionFlag">.deleteTransactionFlag</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionSucсessFlag">.deleteTransactionSucсessFlag</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.mutations">.mutations</a>
+<ul>
+<li><a href="#module_store..storeConfig.mutations.setProducts">.setProducts()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDataLoaded">.setDataLoaded()</a></li>
+<li><a href="#module_store..storeConfig.mutations.sortProducts">.sortProducts(fieldName)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setProductsPerPage">.setProductsPerPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.nextPage">.nextPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.previosPage">.previosPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionFlag">.setDeleteTransactionFlag(flag)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionSucсessFlag">.setDeleteTransactionSucсessFlag()</a></li>
+<li><a href="#module_store..storeConfig.mutations.deleteProducts">.deleteProducts(products)</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.getters">.getters</a>
+<ul>
+<li><a href="#module_store..storeConfig.getters.pageCount">.pageCount()</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.actions">.actions</a>
+<ul>
+<li><a href="#module_store..storeConfig.actions.getProducts">.getProducts()</a></li>
+<li><a href="#module_store..storeConfig.actions.deleteProductsAPI">.deleteProductsAPI()</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_store..storeConfig"></a></p>
+
+<h3>store~storeConfig</h3>
+
+<p>store configuration</p>
+
+<p><strong>Kind</strong>: inner property of <a href="#module_store"><code>store</code></a>  </p>
+
+<ul>
+<li><a href="#module_store..storeConfig">~storeConfig</a>
+<ul>
+<li><a href="#module_store..storeConfig.state">.state</a>
+<ul>
+<li><a href="#module_store..storeConfig.state.dataLoaded">.dataLoaded</a></li>
+<li><a href="#module_store..storeConfig.state.products">.products</a></li>
+<li><a href="#module_store..storeConfig.state.productsPerPage">.productsPerPage</a></li>
+<li><a href="#module_store..storeConfig.state.currentPage">.currentPage</a></li>
+<li><a href="#module_store..storeConfig.state.sortField">.sortField</a></li>
+<li><a href="#module_store..storeConfig.state.sortDirection">.sortDirection</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionFlag">.deleteTransactionFlag</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionSucсessFlag">.deleteTransactionSucсessFlag</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.mutations">.mutations</a>
+<ul>
+<li><a href="#module_store..storeConfig.mutations.setProducts">.setProducts()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDataLoaded">.setDataLoaded()</a></li>
+<li><a href="#module_store..storeConfig.mutations.sortProducts">.sortProducts(fieldName)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setProductsPerPage">.setProductsPerPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.nextPage">.nextPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.previosPage">.previosPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionFlag">.setDeleteTransactionFlag(flag)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionSucсessFlag">.setDeleteTransactionSucсessFlag()</a></li>
+<li><a href="#module_store..storeConfig.mutations.deleteProducts">.deleteProducts(products)</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.getters">.getters</a>
+<ul>
+<li><a href="#module_store..storeConfig.getters.pageCount">.pageCount()</a></li>
+</ul></li>
+<li><a href="#module_store..storeConfig.actions">.actions</a>
+<ul>
+<li><a href="#module_store..storeConfig.actions.getProducts">.getProducts()</a></li>
+<li><a href="#module_store..storeConfig.actions.deleteProductsAPI">.deleteProductsAPI()</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state"></a></p>
+
+<h4>storeConfig.state</h4>
+
+<p>global state</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig"><code>storeConfig</code></a>  </p>
+
+<ul>
+<li><a href="#module_store..storeConfig.state">.state</a>
+<ul>
+<li><a href="#module_store..storeConfig.state.dataLoaded">.dataLoaded</a></li>
+<li><a href="#module_store..storeConfig.state.products">.products</a></li>
+<li><a href="#module_store..storeConfig.state.productsPerPage">.productsPerPage</a></li>
+<li><a href="#module_store..storeConfig.state.currentPage">.currentPage</a></li>
+<li><a href="#module_store..storeConfig.state.sortField">.sortField</a></li>
+<li><a href="#module_store..storeConfig.state.sortDirection">.sortDirection</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionFlag">.deleteTransactionFlag</a></li>
+<li><a href="#module_store..storeConfig.state.deleteTransactionSucсessFlag">.deleteTransactionSucсessFlag</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.dataLoaded"></a></p>
+
+<h5>state.dataLoaded</h5>
+
+<p>данные успешно загружен</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.products"></a></p>
+
+<h5>state.products</h5>
+
+<p>массиы всех продуктов</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.productsPerPage"></a></p>
+
+<h5>state.productsPerPage</h5>
+
+<p>количество продуктов на странице</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.currentPage"></a></p>
+
+<h5>state.currentPage</h5>
+
+<p>текущая страница</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.sortField"></a></p>
+
+<h5>state.sortField</h5>
+
+<p>поле по которому отсортированы продукты</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.sortDirection"></a></p>
+
+<h5>state.sortDirection</h5>
+
+<p>направление сорировки asc || desc</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.deleteTransactionFlag"></a></p>
+
+<h5>state.deleteTransactionFlag</h5>
+
+<p>флаг тразнакции на удаление продуктов
+процесс асинхронный true транзакция идет, false не идет</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.state.deleteTransactionSucсessFlag"></a></p>
+
+<h5>state.deleteTransactionSucсessFlag</h5>
+
+<p>флаг успешного завершения транзакции удаления</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig.state"><code>state</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations"></a></p>
+
+<h4>storeConfig.mutations</h4>
+
+<p>мутации</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig"><code>storeConfig</code></a>  </p>
+
+<ul>
+<li><a href="#module_store..storeConfig.mutations">.mutations</a>
+<ul>
+<li><a href="#module_store..storeConfig.mutations.setProducts">.setProducts()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDataLoaded">.setDataLoaded()</a></li>
+<li><a href="#module_store..storeConfig.mutations.sortProducts">.sortProducts(fieldName)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setProductsPerPage">.setProductsPerPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.nextPage">.nextPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.previosPage">.previosPage()</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionFlag">.setDeleteTransactionFlag(flag)</a></li>
+<li><a href="#module_store..storeConfig.mutations.setDeleteTransactionSucсessFlag">.setDeleteTransactionSucсessFlag()</a></li>
+<li><a href="#module_store..storeConfig.mutations.deleteProducts">.deleteProducts(products)</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.setProducts"></a></p>
+
+<h5>mutations.setProducts()</h5>
+
+<p>установить масив продуктов</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.setDataLoaded"></a></p>
+
+<h5>mutations.setDataLoaded()</h5>
+
+<p>установить флаг того, что продуктв загружены</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.sortProducts"></a></p>
+
+<h5>mutations.sortProducts(fieldName)</h5>
+
+<p>осротировать продукты по полю</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| fieldName | <code>string</code> | имя поля для сортировки |</p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.setProductsPerPage"></a></p>
+
+<h5>mutations.setProductsPerPage()</h5>
+
+<p>установить количество продуктов на страинце</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.nextPage"></a></p>
+
+<h5>mutations.nextPage()</h5>
+
+<p>следующая страница</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.previosPage"></a></p>
+
+<h5>mutations.previosPage()</h5>
+
+<p>предидущая страница</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.setDeleteTransactionFlag"></a></p>
+
+<h5>mutations.setDeleteTransactionFlag(flag)</h5>
+
+<p>признак осуществления транзакции на удаление</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| flag | <code>boolean</code> | true транзакция идет, false не идет если идет транзакция удаления - другие транзакции интерфейс не запускает |</p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.setDeleteTransactionSucсessFlag"></a></p>
+
+<h5>mutations.setDeleteTransactionSucсessFlag()</h5>
+
+<p>флаг успеха транзакции удаления</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.mutations.deleteProducts"></a></p>
+
+<h5>mutations.deleteProducts(products)</h5>
+
+<p>удалить выбранные продукты</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.mutations"><code>mutations</code></a>  </p>
+
+<p>| Param | Type | Description |
+| --- | --- | --- |
+| products | <code>Array</code> | массив продкутов для удаления |</p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.getters"></a></p>
+
+<h4>storeConfig.getters</h4>
+
+<p>GETTERS</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig"><code>storeConfig</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.getters.pageCount"></a></p>
+
+<h5>getters.pageCount()</h5>
+
+<p>считает общеее количество страниц для пейджинга</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.getters"><code>getters</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.actions"></a></p>
+
+<h4>storeConfig.actions</h4>
+
+<p>ACTIONS</p>
+
+<p><strong>Kind</strong>: static property of <a href="#module_store..storeConfig"><code>storeConfig</code></a>  </p>
+
+<ul>
+<li><a href="#module_store..storeConfig.actions">.actions</a>
+<ul>
+<li><a href="#module_store..storeConfig.actions.getProducts">.getProducts()</a></li>
+<li><a href="#module_store..storeConfig.actions.deleteProductsAPI">.deleteProductsAPI()</a></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><a name="module_store..storeConfig.actions.getProducts"></a></p>
+
+<h5>actions.getProducts()</h5>
+
+<p>загружает продкты через имитацию апи</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.actions"><code>actions</code></a>  </p>
+
+<hr />
+
+<p><a name="module_store..storeConfig.actions.deleteProductsAPI"></a></p>
+
+<h5>actions.deleteProductsAPI()</h5>
+
+<p>удаляет продукты</p>
+
+<p><strong>Kind</strong>: static method of <a href="#module_store..storeConfig.actions"><code>actions</code></a>  </p>
+
+<hr />
